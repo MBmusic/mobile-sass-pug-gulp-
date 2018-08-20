@@ -1,0 +1,96 @@
+.download {
+    background: #fff;
+    margin-bottom: 10px;
+}
+
+.profile__section {
+    &.download {
+        margin-top: 0px;
+    }
+
+    .bluetext {
+        color: #015ecb;
+    }
+
+    &.table {
+        padding: 8px;
+
+        .statictext {
+            table {
+                margin-bottom: 0px;
+
+                th {
+                    font-weight: 400;
+                }
+
+                tr {
+                    td:last-child {
+                        width: 40px;
+                    }
+
+                    &.table--uploadline {
+                        td {
+                            background: #faf6c0;
+                        }
+                    }
+
+                    td {
+                        .table--upload {
+                            width: 21px;
+                            height: 21px;
+                            display: inline-block;
+                            background: url("../img/table-icon-status.png");
+                            margin-top: 5px;
+
+                            &.is--ok {
+                                background-position: 0px 0px;
+                            }
+
+                            &.is--no {
+                                background-position: -21px 0px;
+                            }
+                        }
+                    }
+                }  
+            }
+        } 
+    }
+}
+
+.document {
+    background: #0158b2;
+    border-bottom: solid 2px #a8b9d6;
+    padding: 15px 0 20px;
+    margin-bottom: 10px;
+
+    .title {
+        color: #fff;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+
+    .label {
+        width: 276px;
+        margin: 0 auto;
+
+        label {
+            padding: 0;
+            color: #fff;
+            margin-bottom: 3px;
+        }
+
+        &.label--docselect {
+            text-align: center;
+
+            a {
+                color: #68faf7;
+                text-decoration: underline;
+                line-height: 50px;
+            }         
+        }
+    }
+
+    .games__all {
+        padding: 0;
+    }
+}

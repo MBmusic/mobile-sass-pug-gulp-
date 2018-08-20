@@ -1,0 +1,184 @@
+doctype html
+html(lang="ru-RU")
+    head
+        include head/head.pug
+    body
+        include layouts/left_sidebar.pug
+        include layouts/right_sidebar.pug
+        include layouts/page_preloader.pug
+        
+        div#wrapper
+            .header
+                include layouts/header.pug
+            section.header-substrate.header-substrate--linefence
+                img(src="img/banner_payments.png")
+                .linefence
+            div.contentpage.contentpage--graybg
+                div.contentpage__content.contentpage--else
+                    div.title Методы оплаты
+                    
+                    div.methodspay
+                        div.methodspay__blocks
+                            div.methodspay__blockimg
+                                img(src="img/pay/visa.png", alt="")
+                            div.methodspay__blockimg
+                                img(src="img/pay/wallet.png", alt="")
+                            
+                            div.clear
+
+                            div.methodspay__blocktext
+                                div.methodspay__text
+                                    p
+                                        | Время зачисления:
+                                        span мгновенно
+                                        br
+                                        | Доступные валюты:
+                                        span USD / RUB / UAH
+                                        br
+                                        | Возможность вывода:
+                                        span от 90 USD / 3000 RUB / 800 UAH
+                                        br
+                                        | Сроки вывода:
+                                        span 1-6 банк. дней
+
+                                    div.clear
+                                    div.games__all
+                                        a(href="#", class="btn btn--green") Пополнить счет 
+
+                                div.methodspay__text
+                                    p
+                                        | Время зачисления:
+                                        span мгновенно
+                                        br
+                                        | Доступные валюты:
+                                        span USD / RUB / UAH
+                                        br
+                                        | Возможность вывода:
+                                        span от 10 USD / 250 RUB / 50 UAH
+                                        br
+                                        | Сроки вывода:
+                                        span до 24 часов
+                                        br
+
+                                    div.games__all
+                                        a(href="#", class="btn btn--green") Пополнить счет 
+
+                        div.methodspay__blocks
+                            div.methodspay__blockimg
+                                img(src="img/pay/qiwi.png", alt="")
+                            div.methodspay__blockimg
+                                img(src="img/pay/yandex.png", alt="")
+                            
+                            div.clear
+
+                            div.methodspay__blocktext
+                                div.methodspay__text
+                                    //div.methodspay__float-block
+                                    //    h3.methodspay__title Условия депозита
+                                    p
+                                        | Время зачисления:
+                                        span мгновенно
+                                        br
+                                        | Доступные валюты:
+                                        span RUB
+                                        br
+                                        | Возможность вывода:
+                                        span от 250 RUB
+                                        br
+                                        | Сроки вывода:
+                                        span до 48 часов
+                                        br
+
+                                    div.games__all
+                                        a(href="#", class="btn btn--green") Пополнить счет 
+
+                                div.methodspay__text
+                                    p
+                                        | Время зачисления:
+                                        span мгновенно
+                                        br
+                                        | Доступные валюты:
+                                        span RUB
+                                        br
+                                        | Возможность вывода:
+                                        span от 10 USD / 250 RUB / 50 UAH
+                                        br
+                                        | Сроки вывода:
+                                        span до 48 часов
+                                        br
+
+                                    div.games__all
+                                        a(href="#", class="btn btn--green") Пополнить счет 
+
+                        div.methodspay__blocks
+                            div.methodspay__blockimg
+                                img(src="img/pay/payeer.png", alt="")
+                            div.methodspay__blockimg
+                                img(src="img/pay/okpay.png", alt="")
+                            
+                            div.clear
+
+                            div.methodspay__blocktext
+                                div.methodspay__text
+                                    p
+                                        | Время зачисления:
+                                        span мгновенно
+                                        br
+                                        | Доступные валюты:
+                                        span USD / RUB / UAH
+                                        br
+                                        | Возможность вывода:
+                                        span от 10 USD / 100 RUB / 300 UAH
+                                        br
+                                        | Сроки вывода:
+                                        span до 48 часов
+                                        br
+
+                                    div.games__all
+                                        a(href="#", class="btn btn--green") Пополнить счет 
+
+                                div.methodspay__text
+                                    p
+                                        | Время зачисления:
+                                        span мгновенно
+                                        br
+                                        | Доступные валюты:
+                                        span USD / RUB
+                                        br
+                                        | Возможность вывода:
+                                        span нет
+                                        br
+                                        | Сроки вывода:
+                                        span до 48 часов
+                                        br
+
+                                    div.games__all
+                                        a(href="#", class="btn btn--green") Пополнить счет 
+
+                        div.methodspay__blocks
+                            div.methodspay__blockimg
+                                img(src="img/pay/advcash.png", alt="")
+                            
+                            div.clear
+
+                            div.methodspay__blocktext
+                                div.methodspay__text
+                                    p
+                                        | Время зачисления:
+                                        span мгновенно
+                                        br
+                                        | Доступные валюты:
+                                        span USD / RUB
+                                        br
+                                        | Возможность вывода:
+                                        span от 10 USD / 250 RUB / 50 UAH
+                                        br
+                                        | Сроки вывода:
+                                        span до 48 часов
+                                        br
+
+                                    div.games__all
+                                        a(href="#", class="btn btn--green") Пополнить счет 
+                 
+
+            include layouts/footer.pug

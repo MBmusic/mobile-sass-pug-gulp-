@@ -1,0 +1,338 @@
+.modal {
+	background: rgba(0, 19, 64, 0.8);
+	position: fixed;
+	top: 0px;
+	left: 0px;
+    @include width-height(100%, 100%);
+    z-index: 9999;
+    
+    &.modal-bonus-start {
+        .modal-dialog {
+            @include width-height(320px, 480px);
+            padding: 10px 16px 16px;
+
+            @media(max-height: 540px) {
+                position: relative;
+                top: 15px;
+            }
+        }
+
+        @media(max-height: 540px) {
+            overflow-y: scroll;
+        }
+    }
+}
+
+.modal-dialog {
+	background: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+    margin: auto;
+    
+    .close {
+        @include width-height(29px, 29px);
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        background: url(../img/modal/close.png) no-repeat;
+        cursor: pointer;
+
+        @media screen and (max-width: 400px) {
+            top: 5px;
+            right: 5px;
+        }
+    }
+
+    .title {
+        color: #01458c;
+        font-size: 28px;
+        line-height: 30px;
+        font-weight: 400;
+        margin-bottom: 136px;
+    }
+
+    .bonus-block-info {
+        height: 288px;
+        background: #01458c;
+        position: relative;
+        z-index: 5;
+
+        .title {
+            text-transform: none;
+            color: #fff;
+            font-size: 16px;
+            padding: 8px 0px 0px;
+            margin-bottom: 16px;
+        }
+
+        .bonus-timer {
+            height: 66px;
+
+            .countdown {
+                max-width: 230px;
+                margin: 0 auto;
+                text-align: center;
+                float: none;
+                position: static;
+
+                .number-wrapper {
+                    .number {
+                        @include width-height(50px, 48px);
+                        background: url(../img/modal/countdown-blue.png) no-repeat;
+                        background-size: contain;
+                        color: #fff;
+                        line-height: 46px;
+                        font-size: 28px;
+                    }
+
+                    .caption {
+                        color: #c9eefc;
+                        font-size: 11px;
+                        bottom: -16px;
+                    }
+
+                    &:nth-child(1) {
+                        .caption {
+                            right: -15px;
+                        }
+
+                        .number {
+                            background: url(../img/modal/countdown-red.png) no-repeat;
+                            background-size: contain;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        .caption {
+                            right: -15px;
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        .caption {
+                            right: -17px;
+                        }
+                    }
+
+                    &:nth-child(4) {
+                        .caption {
+                            right: -16px;
+                        }
+                    }
+
+                    &:before {
+                        left: -7px;
+                        top: 12px;
+                    }
+                }
+            }
+        }
+
+        .activate-bonus {
+            @include width-height(228px, 48px);
+            line-height: 48px;
+            font-family: 'Roboto Condensed', sans-serif;
+            display: block;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 700;
+            background: #7e9a1e;
+            border-radius: 5px;
+            text-align: center;
+            text-transform: uppercase;
+            margin: 0 auto;
+            -webkit-transition: all 0.2s;
+            transition: all 0.2s;
+
+            &:hover {
+                background: #8fad2a;
+            }
+        }
+
+        .up-the-gift {
+            text-align: center;
+            text-transform: lowercase;
+            padding: 8px 0 12px;
+
+            a {
+                color: #00f0ff;
+                font-size: 16px;
+                text-decoration: underline;
+                -webkit-transition: all 0.2s;
+                transition: all 0.2s;
+                font-family: 'Roboto Condensed', sans-serif;
+
+                &:hover {
+                    color: #534c8f;
+                }
+            }
+        }
+
+        .line {
+            background: #a1cce6;
+            @include width-height(260px, 1px);
+            margin: 0 auto;
+        }
+
+        .bonus-bot-text {
+            color: #c9eefc;
+            width: 260px;
+            margin: 0 auto;
+            padding-top: 8px;
+
+            p {
+                line-height: 20px;
+                font-size: 10px;
+            }
+        }
+
+        .btn {
+            width: 228px;
+            height: 50px;
+            display: block;
+            margin: 0 auto;
+            line-height: 44px;
+            font-size: 18px;
+        }
+    }
+
+    .bonus-popup-vulkan {
+        position: absolute;
+        top: 62px;
+        left: 124px;
+        background: url(../img/modal/vulkan-img.png) no-repeat;
+        @include width-height(184px, 135px);
+    }
+
+    .bonus-block-lit {
+        @include width-height(89px, 90px);
+        position: absolute;
+        z-index: 1;
+        text-shadow: 0px 2px 0px #00163d;
+        font-weight: 700;
+        color: #fff;
+        text-align: center;
+        text-transform: uppercase;
+        padding-top: 22px;
+
+        &.bonus-block-lit-blue {
+            background: url(../img/modal/bonus-img-blue.png) no-repeat;
+        }
+
+        &.bonus-block-lit-red {
+            background: url(../img/modal/bonus-img-red.png) no-repeat;
+        }
+
+        &.bb1 {
+            top: 78px;
+            left: 12px;
+        }
+
+        &.bb2 {
+            top: 46px;
+            left: 96px;
+        }
+
+        span {
+            &:first-child {
+                font-size: 30px;
+
+                i {
+                    font-size: 16px;
+                }
+            }
+
+            &:last-child {
+                font-size: 16px;
+            }
+        }
+
+        div {
+            width: 60px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.4);
+            margin: 0 auto;
+        }
+    }
+
+    .bonus-block-big {
+        @include width-height(105px, 107px); 
+        background: url(../img/modal/bonus-img-big-red.png) no-repeat;
+        position: absolute;
+        z-index: 1;
+        top: 52px;
+        left: 28px;
+        text-shadow: 0px 2px 0px #00163d;
+        font-weight: 700;
+        color: #fff;
+        text-align: center;
+        text-transform: uppercase;
+        padding-top: 30px;
+
+        span {
+            &:first-child {
+                font-size: 36px;
+
+                i {
+                    font-size: 22px;
+                }
+            }
+
+            &:last-child {
+                font-size: 16px;
+            }
+        }
+
+        div {
+            width: 60px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.4);
+            margin: 0 auto;
+        }
+    }
+}
+
+
+
+.modal.modal-bonus-start .modal-dialog .float-right .bonus-timer .countdown .number-wrapper .number {
+    width: 63px;
+    height: 58px;
+    background: url(/img/modal/countdown-blue.png) no-repeat;
+    color: #fff;
+    line-height: 56px;
+    font-size: 34px;
+}
+
+.modal.modal-bonus-start .modal-dialog .float-right .bonus-timer .countdown .number-wrapper .caption {
+    color: #c9eefc;
+    font-size: 12px;
+    bottom: -26px;
+}
+
+.modal.modal-bonus-start .modal-dialog .float-right .bonus-timer .countdown .number-wrapper:nth-child(1) .caption {
+    right: -3px;
+}
+
+.modal.modal-bonus-start .modal-dialog .float-right .bonus-timer .countdown .number-wrapper:nth-child(2) .caption {
+    right: -3px;
+}
+
+.modal.modal-bonus-start .modal-dialog .float-right .bonus-timer .countdown .number-wrapper:nth-child(3) .caption {
+    right: -3px;
+}
+
+.modal.modal-bonus-start .modal-dialog .float-right .bonus-timer .countdown .number-wrapper:nth-child(4) .caption {
+    right: -10px;
+}
+
+.modal.modal-bonus-start .modal-dialog .float-right .bonus-timer .countdown .number-wrapper:before {
+    left: -6px;
+    top: 6px;
+}
+
+.modal.modal-bonus-start .modal-dialog .float-right .bonus-timer .countdown .number-wrapper:nth-child(1) .number {
+    background: url(/img/modal/countdown-red.png) no-repeat;
+}

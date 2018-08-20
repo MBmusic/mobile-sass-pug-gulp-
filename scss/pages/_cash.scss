@@ -1,0 +1,65 @@
+.cash {
+  ul {
+    @include flex-container(row, space-between, center);
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
+    margin-left: -2px;
+
+    a {
+      display: inline-block;
+      width: 144px;
+      height: 147px;
+      padding-top: 6px;
+      border-radius: 10px;
+      box-shadow: 0 3px 0 #c6c6da;
+      margin: 0 0 7px 4px;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #0a41a0;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 14px;
+      background-color: #ffffff;
+
+      .icon {
+        display: block;
+        width: 92px;
+        height: 92px;
+        margin: 10px auto;
+        background-repeat: no-repeat;
+        background-image: url("../img/cash/cash_sprite.png");
+      }
+
+      &:focus {
+        box-shadow: inset 0 0 22px rgba(0,0,0,0.2), 0 3px 0 rgba(255,255,255,0.4),inset 0 3px 0 rgba(0,0,0,0.1), inset 0 0 22px rgba(0,0,0,0.1);
+      }
+
+      &.cash-deposit .icon {
+        background-position: 0 0;
+      }
+      &.cash-payout .icon {
+        background-position: 0 -99px;
+      }
+      &.cash-cp .icon {
+        background-position: 0 -199px;
+      }
+      &.cash-deposit-history .icon {
+        background-position: 0 -299px;
+      }
+      &.cash-payout-history .icon {
+        background-position: 0 -399px;
+      }
+      &.cash-payments .icon {
+        background-position: 0 -499px;
+      }
+    }
+    @media(max-width: 910px) {
+      justify-content: center;
+    }
+  }
+
+
+
+
+}

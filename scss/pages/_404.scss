@@ -1,0 +1,23 @@
+/* 404 */
+
+.errorpage {
+    text-align: center;
+
+    .errorpage__redtitle {
+        color: #e90936;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    .errorpage__banner {
+        padding-top: 20px;
+    }
+}

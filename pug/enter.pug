@@ -1,0 +1,81 @@
+doctype html
+html(lang="ru-RU")
+    head
+        include head/head.pug
+    body
+        include layouts/left_sidebar.pug
+        include layouts/right_sidebar.pug
+        include layouts/page_preloader.pug
+        
+        diw#wrapper
+            .header.header--line
+                include layouts/header.pug
+
+            div.contentpage.contentpage--fence
+                div.contentpage__content.contentpage--else
+                    div.title Вход
+
+                    div.authblock
+                        form(method="post") 
+                            div.authblock__type
+                                span.active
+                                    i
+                                    b EMAIL
+
+                                span
+                                    i
+                                    b ТЕЛЕФОН
+
+                                div.clear
+
+                            div.label
+                                label Введите email
+                                input(type="email", class="label__email")
+
+                            div.label
+                                label Введите пароль
+                                input(type="password", class="label__password")
+
+                            div.forgotpass
+                                a(href="#", class="forgotpass__link") Забыли пароль?
+
+                            div.games__all
+                                button(class="btn btn--blue") Вход 
+
+                        div.or
+                            span или
+                            div
+
+                        div.authsoc
+                            div.authsoc__title войдите через соц. сеть:
+                            ul
+                                li
+                                    a(href="#", class="authsoc__vk")
+                                li
+                                    a(href="#", class="authsoc__fb")
+                                li
+                                    a(href="#", class="authsoc__od")
+                                li
+                                    a(href="#", class="authsoc__gp")
+                                li
+                                    a(href="#", class="authsoc__tw")
+                                li
+                                    a(href="#", class="authsoc__ma")
+
+            div.contentpage.contentpage--graybg
+                div.contentpage__content.contentpage--else
+                    div.contentpage__regaccount
+                        div.title Еще нет аккаунта?
+
+                        div.enter__bonus
+                            p
+                                | Получи 
+                                span 3000руб 
+                                | бездепозитного 
+                                br
+                                | бонуса за регистрацию!     
+
+                        div.games__all
+                            a(href="#", class="btn btn--red") Регистрация 
+                    
+            include layouts/footer.pug

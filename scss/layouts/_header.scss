@@ -1,0 +1,44 @@
+.header--main {
+  @include flex-container(row, center, center);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background-color: $blue;
+  z-index: 2;
+
+
+  .header--home & {
+    background-color: rgba(0, 55, 120, 0);
+
+    &, .header-logo--small,.open__right-sidebar, .icon-reg {
+      transition: all ease 0.4s;
+    }
+
+    .header-logo--small {
+      position: relative;
+      top: -69px;
+    }
+
+    &.active {
+      background-color: $blue;
+
+      .header-logo--small {
+        top: 0;
+      }
+    }
+  }
+
+  .header--line & {
+    box-shadow: 0 2px 0 #00b5ff;
+
+  }
+
+}
+.header--no-reg {
+  .open__right-sidebar {
+    display: none;
+  }
+}

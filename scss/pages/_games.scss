@@ -1,0 +1,73 @@
+/* games */
+
+.contentpage.contentpage--graybg {
+    background: #e6e6f4;
+    position: relative;
+
+    .contentpage__content {
+        padding-top: 14px;
+    }
+}
+
+.linefence {
+    @include width-height(100%, 5px);
+    position: relative;
+    background: url(../img/zeb.png) repeat-x;
+    position: absolute;
+    top: -5px;
+    left: 0px;
+}
+
+.title {
+    font-size: 24px;
+    color: #015ecb;
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 26px;
+}
+
+.game--content .title {
+    margin-bottom: 0px;
+}
+
+.gamedemo {
+    padding: 5px 0 15px;
+    text-align: center;
+
+    a {
+        text-decoration: underline;
+        color: #1974ab;
+        font-weight: 700;
+    }
+}
+
+.gameblock__games {
+    &.game--page {
+        width: 290px;
+        margin: 0 auto 10px;
+        overflow: hidden;
+        border: 0 none;
+
+        .gameblock__game {
+            float: none;
+            width: 145px;
+
+            .gameblock__games-link {
+                top: 35%;
+
+                span {
+                    margin-top: 5px;
+                }
+            }
+
+            &.uk-overlay {
+                overflow: visible;
+                .uk-overlay-panel {
+                    transform: translateX(145px);
+                }
+            }
+        }
+    }
+}

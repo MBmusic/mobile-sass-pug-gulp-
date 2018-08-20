@@ -1,0 +1,241 @@
+/* dashboard */
+
+.contentpage {
+    &.contentpage--graybg {
+        .contentpage__content {
+            &.contentpage--dashboard {
+                padding: 14px 0;
+            }
+        }
+    }
+}
+
+.balance {
+    text-align: center;
+    margin-bottom: 12px;
+
+    .balance__title {
+        text-transform: uppercase;
+        color: #aeadb8;
+        font-weight: 700;
+    }
+
+    .balance__counter {
+        @include width-height(285px, 50px);
+        background: url(../img/balance.png) center no-repeat;
+        margin: 0 auto;
+        line-height: 48px;
+
+        span {
+            font-weight: 700;
+            color: #266ccc;
+            font-size: 30px;
+            display: block;
+            margin: 0 auto;
+            width: 146px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
+
+    .balance__line {
+        @include width-height(285px, 20px);
+        margin: 0 auto 10px;
+
+        .balance__linetext {
+            width: 50px;
+            float: left;
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #aeadb8;
+        }
+
+        .balance__linemain {
+            float: left;
+            @include width-height(185px, 20px);
+            padding-top: 6px;
+
+            span {
+                @include width-height(100%, 9px);
+                background: #d8d8f0;
+                display: block;
+                border-radius: 5px;
+                border: solid 2px #fff;
+                position: relative;
+                overflow: hidden;
+
+                i {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    @include width-height(40%, 5px);
+                    background: #ffe000;
+                }
+            }
+        }
+    }
+
+    .balance__full {
+        a {
+            @include width-height(234px, 42px);
+            line-height: 36px;
+            font-size: 18px;
+            margin: 0 auto;
+        }
+    }
+}
+
+.balancestats {
+    background: #fff;
+    position: relative;
+    max-width: 624px;
+    margin: 0 auto 20px;
+
+    &:before {
+        @extend .linefance;
+        top: 0px;
+        background: url(../img/reverse-zeb.png) repeat-x;
+    }
+
+    &:after {
+        @extend .linefance;
+    }
+
+    .balancestats__blocks {
+        padding: 15px 10px;
+
+        .balancestats__block {
+            float: left;
+            width: 50%;
+            text-align: center;
+            padding: 0 10px;
+
+            &:first-child {
+                border-right: solid 2px #ededff;
+            }
+
+            .balancestats__title {
+                text-transform: uppercase;
+                color: #aeadb8;
+                font-weight: 700;
+            }
+
+            .balancestats__stat {
+                color: #266ccc;
+                font-weight: 700;
+                font-size: 24px;
+                padding: 6px 0 14px;
+            }
+
+            .balance__full {
+                .btn {
+                    height: 42px;
+                    line-height: 36px;
+                    font-size: 18px;
+                    margin: 0 auto;
+                    position: relative;
+
+                    &.active {
+                        &:after {
+                            content: "";
+                            border: 10px solid transparent; 
+                            border-bottom: 10px solid #ededff; 
+                            position: absolute;
+                            left: 50%;
+                            margin-left: -10px;
+                            bottom: -18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .balancestats__toggle {
+        width: calc(100% - 40px);
+        margin: 0 auto;
+        background: #ededff;
+        border-radius: 8px;
+        padding: 15px 7px;
+        display: none;
+
+        .balance__full{
+            padding-top: 10px;
+            
+            .btn {
+                @include width-height(234px, 42px);
+                line-height: 36px;
+                font-size: 18px;
+                margin: 0 auto;
+            }
+        }
+
+        .balancestats__line {
+            color: #7a7787;
+            margin-bottom: 7px;
+
+            i {
+                color: #266ccc;
+                font-style: normal;
+                font-weight: 700;
+            }
+        }
+    }
+
+    &.balancestats--cash {
+        height: 88px;
+    }
+
+    .balancestats__cashin {
+        padding: 15px 10px;
+
+        .balancestats__cash {
+            float: left;
+            width: 50%;
+            padding: 0 10px;
+            text-align: center;
+            padding-top: 8px;
+
+            .balancestats__title {
+                color: #aeadb8;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+
+            .balancestats__stat {
+                color: #266ccc;
+                font-weight: 700;
+                font-size: 24px;
+                padding: 6px 0 14px;
+            }
+        }
+
+        .balance__full {
+            &.balance--btncash {
+                float: right;
+                width: 50%;
+                padding: 12px 10px 0;
+
+                a {
+                    height: 42px;
+                    line-height: 36px;
+                    font-size: 18px;
+                    margin: 0 auto;
+                    position: relative;
+                }
+            }
+        }
+    }
+}
+
+.dashboard__bonus-tournament {
+    @include flex-container(row, center, center);
+    flex-wrap: wrap;
+    margin-left: -10px;
+}
+
+.br {
+    display: none;
+}

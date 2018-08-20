@@ -1,0 +1,54 @@
+doctype html
+html(lang="ru-RU")
+    head
+        include head/head.pug
+    body
+        include layouts/left_sidebar.pug
+        include layouts/right_sidebar.pug
+        include layouts/page_preloader.pug
+        
+        div#wrapper
+            .header
+                include layouts/header.pug
+            section.header-substrate.header-substrate--linefence
+                img(src="img/banner_games_tr.png")
+                .linefence
+            div.contentpage.contentpage--graybg
+                div.contentpage__content.game--content
+                    div.title Игры
+                    div.gameblock__nav(data-uk-slider="{center:true}")
+                        div.uk-slider-container
+                            ul.uk-slider.uk-grid-width-medium-1-3.uk-grid-width-large-1-4
+                                li
+                                    a(href="#", class="active") Все игры
+                                li
+                                    a(href="#") Новые
+                                li
+                                    a(href="#") Автоматы
+                                li
+                                    a(href="#") Рулетка
+                                li
+                                    a(href="#") Видеопокер
+                                li
+                                    a(href="#") Карты
+                                li
+                                    a(href="#") Джекпоты
+                    
+                    div.gameblock__games
+                        - for (var i = 0; i < 8; i++)
+                            figure.gameblock__game.uk-overlay.uk-ignore
+                                img(src="img/game.jpg", alt="", class="uk-overlay-spin")
+                                figcaption.uk-overlay-panel.uk-overlay-slide-top
+                                    a(href="#", class="gameblock__games-link")
+                                        b.gameblock__games-roundbtn.play
+                                            i
+                                        span Регистрация
+
+                                    div.gameblock__games-title
+                                        a(href="#") демо
+
+                        div.clear
+                    div.games__all
+                        a(href="#", class="btn btn--green") Больше игр
+
+            include layouts/footer.pug

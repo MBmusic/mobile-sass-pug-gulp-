@@ -1,0 +1,92 @@
+/* responsive */
+
+@media screen and (max-width: 900px) {
+    .contacts .contacts__block {
+        width: 270px;
+
+        p {
+            height: auto;
+        }
+    }
+
+    .contacts .contacts__block:nth-child(1),
+    .contacts .contacts__block:nth-child(2) {
+        margin-bottom: 18px;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .gameblock__games .gameblock__game {
+        width: 50%;
+    }
+
+    .gameblock__nav li a {
+        margin: 0 40px;
+    }
+}
+
+/* footer */
+
+@media (max-width: 550px) {
+    .footer-actions-common {
+        width: 100%;
+        float: none;
+    }
+
+    .footer__actions {
+        background-image: none;
+
+        a {
+            text-align: center;
+            padding: 15px;
+        }
+
+        .footer__help {
+            background-color: $app-yellow;
+        }
+        .footer__site {
+            background-color: $app-blue-dark;
+        }
+    }
+
+    .footer__navigation {
+        background-color: $app-blue-light;
+
+        .navigation__wrapper {
+            @include flex-container(row, left, flex-start);
+            padding: 20px 15px;
+
+            section {
+                width: auto;
+                float: none;
+                padding: 0;
+            }
+        }
+    }
+
+    .footer__pay {
+        .pay__wrapper {
+            .pay__list {
+                @include flex-container(row, center, center);
+
+                li {
+                    padding: 5px 20px;
+
+                    &:first-child {
+                        padding-left: 20px;
+                    }
+                    &:last-child {
+                        padding-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .gameblock__nav li a {
+        margin: 0 20px;
+    }
+}
+
+

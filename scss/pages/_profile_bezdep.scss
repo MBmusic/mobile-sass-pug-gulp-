@@ -1,0 +1,126 @@
+/* profile bezdep */
+
+.bezdep {
+    .bezdep--icon {
+        position: relative;
+        @include width-height(235px, 145px);
+        display: block;
+        margin: 0 auto;
+    }
+
+    .bezdep__block {
+        background: #fff;
+        z-index: 1;
+        position: relative;
+        margin-top: -62px;
+        padding: 10px;
+
+        .bezdep__text {
+            text-align: center;
+            color: #898899;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+
+        .bezdep__title {
+            color: #4e4d5e;
+            font-size: 18px;
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 20px;
+
+            span {
+                color: #d22527;
+            }
+        }
+
+        .bezdep__steps {
+            margin-bottom: 10px;
+            text-align: center;
+            position: relative;
+
+            .bezdep__step {
+                display: inline-block;
+                vertical-align: top;
+                margin: 0 25px 25px;
+                position: relative;
+                z-index: 1;
+
+                .bezdep__img {
+                    @include width-height(95px, 83px);
+                    display: block;
+                    margin: 0 auto;
+                    background: url(../img/steps.png) no-repeat;
+                }
+
+                $offset: 0px;
+
+                @for $i from 1 through 3 {
+                    &.bezdep--step#{$i} {
+                        .bezdep__img {
+                            background-position: $offset 0px;
+                        }
+    
+                        &.active {
+                            .bezdep__img {
+                                background-position: $offset -83px;
+                            }
+                        }
+                    }
+                    
+                    $offset: $offset - 95px;
+                }
+
+                div {
+                    margin: 10px 0;
+
+                    .bezdep__stepname {
+                        display: block;
+                        font-size: 16px;
+                        color: #266ccc;
+                        text-align: center;
+                        font-weight: 700;
+                        margin-bottom: 2px;
+                    }
+
+                    .bezdep__steptext {
+                        display: block;
+                        font-size: 14px;
+                        color: #4e4d5e;
+                        text-align: center;
+                    }
+                }
+
+                @media(max-width: 550px) {
+                    &.bezdep--step3 {
+                        display: block;
+                        margin-bottom: 15px;
+                    }
+                }
+
+                @media(max-width: 400px) {
+                    &.bezdep--step1 {
+                        margin: 0 15px 25px 0;
+                    }  
+                    
+                    &.bezdep--step2 {
+                        margin: 0 0 25px 15px;
+                    } 
+                }
+            }
+            
+            .footprints {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                z-index: 0;
+                margin-left: -34px;
+                display: none;
+
+                @media(max-width: 550px) {
+                    display: block;
+                }
+            }
+        }
+    }
+}

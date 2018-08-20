@@ -1,0 +1,25 @@
+select {
+  width: 100%;
+  display: block;
+  height: 40px;
+  border: solid 2px #d7deea;
+  border-radius: 5px;
+  padding: 0 12px;
+  background: $white;
+  color: #6d6c7d;
+  font-size: 14px;
+  font-family: $font-family;
+
+  &:focus {
+    border: solid 2px #ffe000;
+  }
+
+  &[disabled] {
+    border: none;
+    background: #fbfbff;
+  }
+
+  background: url(../img/select_arrow.png) no-repeat right;
+  -webkit-appearance: none;
+  -moz-appearance:none;
+}

@@ -1,0 +1,218 @@
+/* enter */
+
+.contentpage.contentpage--fence {
+    border-bottom: none;
+
+    &:after {
+        @extend .linefance;
+    }
+}
+
+.authblock {
+    width: 290px;
+    margin: 0 auto;  
+
+    .authblock__type {
+        height: 40px;
+        margin-bottom: 20px;
+
+        span {
+            @include width-height(143px, 40px);
+            display: block;
+            float: left;
+            background: #00b5ff;
+            border-radius: 25px;
+            cursor: pointer;
+            text-align: center;
+            line-height: 38px;
+            position: relative;
+
+            i {
+                display: inline-block;
+                vertical-align: middle;
+                @include width-height(16px, 16px);
+                background: url(../img/email-phone.png) no-repeat;
+                margin: 0 3px;
+            }
+
+            b {
+                display: inline-block;
+                vertical-align: middle;
+                color: $white;
+            }
+
+            &.active {
+                background: #ffd801;
+
+                &:after {
+                    content: "";
+                    border: 7px solid transparent; 
+                    border-top: 7px solid #ffd801; 
+                    position: absolute;
+                    left: 50%;
+                    bottom: -14px;
+                    margin-left: -3px;
+                }
+            }
+        }
+
+        span:nth-child(1) {
+            margin-right: 4px;
+
+            i {
+                background-position: left top;
+            }
+        }
+
+        span:nth-child(2) {
+            i {
+                background-position: right top;
+            }
+        }
+    }   
+}
+
+.contentpage__regaccount {
+    padding: 10px 0 0;
+
+    .title {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .enter__bonus {
+        text-align: center;
+
+        p {
+            margin-bottom: 0;
+            color: #4e4d5e;
+
+            span {
+                color: $red;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.label {
+    width: 100%;
+    margin-bottom: 10px;
+
+    label {
+        display: block;
+        color: #aeadb8;
+        padding: 0px 10px;
+    }
+
+    input {
+        width: 100%;
+        display: block;
+        height: 40px;
+        border: solid 2px #d7deea;
+        border-radius: 5px;
+        padding: 0 14px;
+        font-family: $font-family;
+        font-size: 14px;
+
+        &[disabled] {
+            border: none;
+            background: #fbfbff;
+        }
+
+        &:focus {
+            border: solid 2px #ffe000;
+        }
+
+        &.label__email {
+            background: url(../img/mail.png) right center no-repeat;
+        }
+
+        &.label__password {
+            background: url(../img/lock.png) right center no-repeat;
+        }
+    }
+}
+
+.forgotpass {
+    text-align: center;
+    padding: 5px 0;
+
+    .forgotpass__link {
+        color: #1974ab;
+        text-decoration: underline;
+    }
+}
+
+.or {
+    position: relative;
+    margin-bottom: 28px;
+
+    span {
+        background: $white;
+        @include width-height(54px, auto);
+        position: absolute;
+        left: 50%;
+        top: 0px;
+        margin-left: -27px;
+        text-align: center;
+        z-index: 1;
+        color: #6d6c7d;
+    }
+
+    div {
+        position: absolute;
+        top: 10px;
+        z-index: 0;
+        width: 100%;
+        height: 2px;
+        background: #d7deea;
+    }
+}
+
+.authsoc {
+    .authsoc__title {
+        text-align: center;
+        color: #6d6c7d;
+        margin-bottom: 8px;
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+
+        li {
+            display: inline-block;
+
+            a {
+                display: block;
+                @include width-height(40px, 39px);
+                background: url(../img/social.png) no-repeat;
+
+                &.authsoc__vk {
+                    background-position: 0 0;
+                }
+
+                &.authsoc__fb {
+                    background-position: -40px 0;
+                }
+
+                &.authsoc__od {
+                    background-position: -80px 0;
+                }
+
+                &.authsoc__gp {
+                    background-position: -120px 0;
+                }
+
+                &.authsoc__tw {
+                    background-position: -160px 0;
+                }
+
+                &.authsoc__ma {
+                    background-position: -200px 0;
+                }
+            }
+        }
+    }
+}

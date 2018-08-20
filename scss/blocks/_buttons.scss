@@ -1,0 +1,36 @@
+/* buttons */
+
+.btn {
+    width: 100%;
+    display: block;
+    font-size: 14px;
+    color: $white;
+    opacity: 1;
+    text-align: center;
+
+    &:hover {
+        color: $white;
+        text-decoration: none;
+    }
+    
+    &:active {
+        opacity: 0.8;
+    }
+}
+
+.btn--red, .btn--red:hover {
+    @include btn($red, $yellow, $red);
+}
+
+.btn--blue, .btn--blue:hover {
+    @include btn($blue, $blue-light, $blue);
+}
+
+.btn--green, .btn--green:hover {
+    @include btn($green, $yellow, $green);
+}
+
+.no-active-btn {
+    @include btn(#a5b9d2 , #fff, #a5b9d2);
+    pointer-events: none;
+}

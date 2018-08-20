@@ -1,0 +1,56 @@
+/* registration */
+
+.contentpage--zeb {
+    border-bottom: none;
+    
+    &:after {
+        @extend .linefance;
+        background: url(../img/reverse-zeb.png) repeat-x;
+    }
+}
+
+.contentpage.contentpage--graybg .contentpage__content.contentpage--paddings {
+    padding: 7px 10px;
+}
+
+.bezdepbonus {
+    .bezdepbonus__text {
+        float: left;
+        color: #003778;
+        font-size: 13px;
+        margin-top: 6px;
+
+        span {
+            color: #d10303;
+            font-weight: bold;
+        }
+    }
+
+    img {
+        float: right;
+    }
+}
+
+.label {
+    overflow: hidden;
+    .jq-checkbox {
+        @include width-height(24px, 24px);
+        background: #fbfbff;
+        border: solid 2px #d7deea;
+        margin-right: 6px;
+
+        &.checked {
+            .jq-checkbox__div {
+                @include width-height(15px, 14px);
+                margin: 3px 0 0 4px;
+                background: url(../img/ok.png) no-repeat;
+            }
+        }
+    }
+
+    &.label--checkbox {
+        a {
+            text-decoration: underline;
+        }
+    }
+}

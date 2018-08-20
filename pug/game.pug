@@ -1,0 +1,44 @@
+doctype html
+html(lang="ru-RU")
+    head
+        include head/head.pug
+    body
+        include layouts/left_sidebar.pug
+        include layouts/right_sidebar.pug
+        include layouts/page_preloader.pug
+        
+        div#wrapper
+            .header
+                include layouts/header.pug
+            section.header-substrate.header-substrate--linefence
+                img(src="img/banner_games_tr.png")
+                .linefence
+            div.contentpage.contentpage--graybg
+                div.contentpage__content.contentpage--else
+                    .title
+                        | Игровой автомат
+                        br
+                        | Book of Ra
+
+                    div.gameblock__games.game--page
+                        figure.gameblock__game.uk-overlay.uk-ignore.active
+                            img(src="img/game.jpg", alt="", class="uk-overlay-spin")
+                            figcaption.uk-overlay-panel.uk-overlay-slide-top
+                                a(href="#", class="gameblock__games-link")
+                                    b.gameblock__games-roundbtn
+                                        i
+                                    span Регистрация
+
+                                div.gameblock__games-title
+                                    a(href="#") демо
+                    
+                    div.statictext
+                        p Разнообразие азартных игр в онлайн казино Вулкан дополняет увлекательный игровой автомат Book of Ra от Новоматик. Конечно же, довольно часто можно встретить разнообразие игр, посвященных таинственному Древнему Египту с его притягательной для всех историей, однако именно в Книжках раскрывается дух истории во взаимодействии с азартом и успехом! Погрузитесь в древнеегипетскую историю с игровым автоматом Бук оф Ра – наблюдайте пирамиды, сфинксов, фараонов и их сокровищницы, а также прочую актуальную символику. В действительности же, заядлые игроки со стажем могут подтвердить и то, что такой слот им хорошо 
+
+                    div.games__all
+                        a(href="#", class="btn btn--green") Играть сейчас!
+                    
+                    div.gamedemo
+                        a(href="#", class="") Демо-игра
+
+            include layouts/footer.pug

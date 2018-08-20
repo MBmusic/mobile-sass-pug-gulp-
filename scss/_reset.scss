@@ -1,0 +1,49 @@
+* {
+    @extend .indents;
+    outline: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body, html {
+	@extend .indents;
+	font-family: $font-family;
+}
+
+p {
+	@extend .indents;
+}
+
+ul, li {
+    @extend .indents;
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+    margin: 0px 0px 14px 0px;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+button {
+	border: 0 none;
+    cursor: pointer;
+}
+
+#wrapper {
+    width: 100%;
+    height: 100%;
+}

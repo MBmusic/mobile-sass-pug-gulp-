@@ -1,0 +1,103 @@
+.left-sidebar__header {
+    height: 70px;
+
+    .left-collapse {
+        @include round-btn(50px, 50px);
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        padding: 12px;
+
+        i {
+            @include round-btn-icon(21px, 27px, url("../img/layouts/left.png"));
+            background-position: 0 0;
+        }
+    }
+}
+
+.left-sidebar__nav {
+    a {
+        display: block;
+        height: 68px;
+        color: $white;
+        padding: 12px;
+        text-decoration: none;
+
+        .icon {
+            @include round-btn-icon(26px, 26px, url("../img/layouts/nav_sprite.png"));
+        }
+
+
+        &.nav--games {
+            background-color: #283593;
+            .icon {
+                background-position: 0 0;
+            }
+            &.active  {
+                .icon {
+                    background-position: -28px 1px;
+                }
+            }
+        }
+        &.nav--bonuses {
+            background-color: #303e9f;
+            .icon {
+                background-position: 0 -25px;
+            }
+            &.active  {
+                .icon {
+                    background-position: -28px -25px;
+                }
+            }
+        }
+        &.nav--tournaments {
+            background-color: #3949ab;
+            .icon {
+                background-position: 2 -51px;
+            }
+            &.active  {
+                .icon {
+                    background-position: -28px -51px;
+                }
+            }
+        }
+        &.nav--vip {
+            background-color: #3f51b5;
+            .icon {
+                background-position: 0 -83px;
+            }
+            &.active  {
+                .icon {
+                    background-position: -27px -83px;
+                }
+            }
+        }
+        &.nav--reg {
+            background-color: #485abf;
+            .icon {
+                background-position: 0 -116px;
+            }
+            &.active  {
+                .icon {
+                    background-position: -27px -116px;
+                }
+            }
+        }
+        &.nav--enter {
+            background-color: #1f73f0;
+            .icon {
+                background-position: 2px -150px;
+            }
+            &.active  {
+                .icon {
+                    background-position: -27px -150px;
+                }
+            }
+        }
+        &.active {
+            background-color: $app-active-red;
+        }
+
+    }
+
+}

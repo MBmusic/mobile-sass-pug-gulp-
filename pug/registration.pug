@@ -1,0 +1,100 @@
+doctype html
+html(lang="ru-RU")
+    head
+        include head/head.pug
+    body
+        include layouts/left_sidebar.pug
+        include layouts/right_sidebar.pug
+        include layouts/page_preloader.pug
+        
+        diw#wrapper
+            .header.header--line
+                include layouts/header.pug
+
+            div.contentpage.contentpage--graybg.contentpage--zeb
+                div.contentpage__content.contentpage--else.contentpage--paddings
+                    div.authblock
+                        div.bezdepbonus
+                            div.bezdepbonus__text
+                                | Получи 
+                                span 3000руб 
+                                | бездепозитного 
+                                br
+                                | бонуса за регистрацию!
+                            img(src="./img/bonus.png", alt="")
+
+                            div.clear
+
+
+            div.contentpage.contentpage--fence
+                div.contentpage__content.contentpage--else
+                    div.title Регистрация
+
+                    div.authblock
+                        form(method="post") 
+                            div.authblock__type
+                                span.active
+                                    i
+                                    b EMAIL
+
+                                span
+                                    i
+                                    b ТЕЛЕФОН
+
+                                div.clear
+
+                            div.label
+                                label Введите email
+                                input(type="email", class="label__email")
+
+                            // div.label
+                                label Введите пароль
+                                input(type="password", class="label__password")
+
+                            div.label
+                                label Выберите валюту
+                                select
+                                    option(value="" selected) RUB
+                                    option(value="") UAH
+                                    option(value="") USD
+
+                            div.label.label--checkbox
+                                
+                                input(type="checkbox")
+                                | Я принимаю 
+                                a(href="#") Правила и условия
+
+                            div.games__all
+                                button(class="btn btn--red") Регистрация 
+
+                        div.or
+                            span или
+                            div
+
+                        div.authsoc
+                            div.authsoc__title войдите через соц. сеть:
+                            ul
+                                li
+                                    a(href="#", class="authsoc__vk")
+                                li
+                                    a(href="#", class="authsoc__fb")
+                                li
+                                    a(href="#", class="authsoc__od")
+                                li
+                                    a(href="#", class="authsoc__gp")
+                                li
+                                    a(href="#", class="authsoc__tw")
+                                li
+                                    a(href="#", class="authsoc__ma")
+
+            div.contentpage.contentpage--graybg
+                div.contentpage__content.contentpage--else
+                    div.contentpage__regaccount
+                        div.enter__bonus
+                            p
+                                | Уже регистрировались?    
+
+                        div.games__all
+                            a(href="#", class="btn btn--blue") Войти 
+                    
+            include layouts/footer.pug

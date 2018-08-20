@@ -1,0 +1,94 @@
+.statuses {
+  ul {
+    @include flex-container(row, center, center);
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
+    margin-left: -2px;
+
+    li {
+      display: inline-block;
+      width: 143px;
+      height: 153px;
+      padding-top: 4px;
+      border-radius: 10px;
+      margin: 0 0 4px 4px;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 700;
+      line-height: 16px;
+      background-color: #d6d6ff;
+
+      .icon {
+        display: block;
+        width: 98px;
+        height: 98px;
+        margin: 5px auto;
+        background-repeat: no-repeat;
+        background-image: url("../img/statuses/statuses_sprite.png");
+      }
+
+      p {
+        margin: 0;
+      }
+
+      &.active {
+        background-color: $white;
+      }
+
+      &.status-newbie .icon {
+        background-position: 0 0;
+      }
+      &.status-amateur .icon {
+        background-position: 0 -105px;
+      }
+      &.status-experienced .icon {
+        background-position: 0 -210px;
+      }
+      &.status-lucky .icon {
+        background-position: 0 -315px;
+      }
+      &.status-specialist .icon {
+        background-position: 0 -420px;
+      }
+      &.status-master .icon {
+        background-position: 0 -526px;
+      }
+      &.status-expert .icon {
+        background-position: 0 -631px;
+      }
+      &.status-profi .icon {
+        background-position: 0 -735px;
+      }
+      &.status-guru .icon {
+        background-position: 0 -839px;
+      }
+      &.status-champion .icon {
+        background-position: 0 -945px;
+      }
+      &.status-vip-bronze .icon {
+        background-position: 0 -1050px;
+      }
+      &.status-vip-silver .icon {
+        background-position: 0 -1156px;
+      }
+      &.status-vip-gold .icon {
+        background-position: 0 -1262px;
+      }
+      &.status-vip-platinum .icon {
+        background-position: 0 -1368px;
+      }
+
+    }
+  }
+
+}
+
+.status-name {
+  color: #4e4d5e;
+  font-size: 12px;
+}
+.status-cp {
+  color: #0a41a0;
+  font-size: 14px;
+}

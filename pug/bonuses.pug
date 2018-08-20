@@ -1,0 +1,242 @@
+doctype html
+html(lang="ru-RU")
+    head
+        include head/head.pug
+    body
+        include layouts/left_sidebar.pug
+        include layouts/right_sidebar.pug
+        include layouts/page_preloader.pug
+
+        #wrapper
+            .header
+                include layouts/header.pug
+            section.header-substrate.header-substrate--linefence
+                img(src="img/banner_bonuses.png")
+                .linefence
+            .contentpage.contentpage--graybg
+                .contentpage__content.contentpage--else
+                    h1.title Бонусы
+
+                    .bonuses
+                        // two side bonus card
+                        .flip-card.flip-card--bonus
+                            // bonus
+                            .bonus.bonus--x2.front
+                                img.bonus__image(src="img/bonuses/bg_x2.png")
+                                span.info-icon
+                                section.bonus__main
+                                    header.bonus__header
+                                        h2.bonus__title Бонус x2
+                                        p.bonus__desctiption
+                                            | 500
+                                            sup %
+
+                                        .bonus__content
+                                            .bonus__plus +
+                                            .bonus__fs
+                                                span.bonus-fs__int 500
+                                                sup fs
+                                    .clearfix
+                                    .dash-line
+                                    section.bonus__steps
+                                        .vertical-separator
+                                        .bonus__step
+                                            .bonus__step-bg.step-bg-na
+                                                .bonus__step-icon.bonus__step-icon--textX2 W
+                                                span Wager
+                                            .bonus__step-description
+                                                span.step-description--text1 Вейджер
+                                                span.step-description--text2 35
+                                        .bonus__step
+                                            .bonus__step-bg.step-bg-na
+                                                .bonus__step-icon.bonus__step-icon--dep
+                                                    img(src="img/bonuses/x2-pick1.png")
+                                                span депозит
+                                            .bonus__step-description
+                                                span.step-description--text1 Min (uah)
+                                                span.step-description--text2 10
+                                        .bonus__step
+                                            .bonus__step-bg.bonus__step-bg-time
+                                                .bonus__step-icon.bonus__step-icon--time
+                                                    img(src="img/bonuses/x2-pick2.png")
+                                                span время
+                                            .bonus__step-description
+                                                span.step-description--text3 вт
+                                                span.step-description--text3 20:00-21:00
+                                    footer.bonus__footer
+                                        a.btn.btn--green(href="#") Активировать
+
+
+                            // bonus and
+                            // bonus backside
+                            .bonus.bonus--backside.back
+                                span.info-icon
+                                section.bonus__main
+                                    section.bonus__main-content
+                                        h2.bonus__title Бонус x2
+                                        p.bonus__desctiption
+                                            | 100
+                                            sup %
+                                        .clearfix
+                                        .dash-line
+                                        section.bonus-backside__content
+                                            p.bonus-backside__heading Условия получения бонуса
+                                            ul.bonus-backside__list
+                                                li Min депозит: 25 UAH / 75 RUB / 1 USD
+                                                li Max депозит: 3500 UAH / 10000 RUB /40 USD
+                                                li Вейджер: 12
+                                                li Периодичность: 1 раз в неделю в понедельник
+                                                li Max разрешенная ставка для отыгрыша бонуса: 20 UAH / 60 RUB /1 USD
+
+                                    footer.bonus__footer
+                                        a.btn.btn--green(href="#") Активировать
+                            // bonus backside and
+
+                        // two side bonus card
+                        .flip-card.flip-card--bonus
+                            // bonus
+                            .bonus.bonus--welcome-pack.front
+                                img.bonus__image(src="img/bonuses/bg-hello-pack.png")
+                                span.info-icon
+                                section.bonus__main
+                                    header.bonus__header
+                                        h2.bonus__title Приветственный пакет
+                                        p.bonus__desctiption
+                                            | 5000
+                                            sup.sup-uah UAH
+                                    .clearfix
+                                    .dash-line
+                                    section.bonus__steps
+                                        .vertical-separator
+                                        .bonus__step
+                                            .bonus__step-bg.step-bg-na
+                                                .bonus__step-icon.bonus__step-icon--text
+                                                    | 1
+                                                    sup й
+                                                span депозит
+                                            .bonus__step-description
+                                                span.step-description--text1 бонус
+                                                span.step-description--text2 250%
+                                        .bonus__step
+                                            .bonus__step-bg
+                                                .bonus__step-icon.bonus__step-icon--text
+                                                    | 2
+                                                    sup й
+                                                span депозит
+                                            .bonus__step-description
+                                                span.step-description--text1 бонус
+                                                span.step-description--text2 200%
+                                        .bonus__step
+                                            .bonus__step-bg.bonus__step-bg-time
+                                                .bonus__step-icon.bonus__step-icon--text
+                                                    | 3-10
+                                                    sup й
+                                                span депозит
+                                            .bonus__step-description
+                                                span.step-description--text1 бонус
+                                                span.step-description--text2 150%
+                                    footer.bonus__footer
+                                        a.btn.btn--green(href="#") Активировать
+
+                            // bonus and
+                            // bonus backside
+                            .bonus.bonus--backside.back
+                                span.info-icon
+                                section.bonus__main
+                                    section.bonus__main-content
+                                        h2.bonus__title Приветственный пакет
+                                        p.bonus__desctiption
+                                            | 5000
+                                            sup.sup-uah UAH
+                                        .clearfix
+                                        .dash-line
+                                        section.bonus-backside__content
+                                            p.bonus-backside__heading Условия получения бонуса
+                                            ul.bonus-backside__list
+                                                li Min депозит: 25 UAH / 75 RUB / 1 USD
+                                                li Max депозит: 3500 UAH / 10000 RUB /40 USD
+                                                li Вейджер: 12
+                                                li Периодичность: 1 раз в неделю в понедельник
+                                                li Max разрешенная ставка для отыгрыша бонуса: 20 UAH / 60 RUB /1 USD
+
+                                    footer.bonus__footer
+                                        a.btn.btn--green(href="#") Активировать
+
+                            // bonus backside and
+
+                        // two side bonus card
+                        .flip-card.flip-card--bonus
+                            // bonus
+                            .bonus.bonus--no-dep.front
+                                img.bonus__image(src="img/bonuses/bg-not-dep.png")
+                                span.info-icon
+                                section.bonus__main
+                                    header.bonus__header
+                                        h2.bonus__title Бездепозитный бонус
+                                        p.bonus__desctiption
+                                            | 1000
+                                            sup.sup-uah UAH
+                                    .clearfix
+                                    .dash-line
+                                    section.bonus__steps
+                                        .bonus__step
+                                            .bonus__step-bg
+                                                .bonus__step-icon.bonus__step-icon--text
+                                                    | 1
+                                                    sup й
+                                                span шаг
+                                            .bonus__step-description
+                                                p.step-description--text4
+                                                    | Регистрируйся на сайте
+                                        .bonus__step
+                                            .bonus__step-bg
+                                                .bonus__step-icon.bonus__step-icon--text
+                                                    | 2
+                                                    sup й
+                                                span шаг
+                                            .bonus__step-description
+                                                .step-description--text4
+                                                    | Подтверди email и номер телефона
+                                        .bonus__step
+                                            .bonus__step-bg.bonus__step-bg-time
+                                                .bonus__step-icon.bonus__step-icon--text
+                                                    | 3
+                                                    sup й
+                                                span шаг
+                                            .bonus__step-description
+                                                .step-description--text4
+                                                    | Получи бонус реальными деньгами
+
+                                    footer.bonus__footer
+                                        //p.text-blue - Бонус взяли 18 764 игрока -
+                                        a.btn.btn--green(href="#") Активировать
+
+                            // bonus and
+
+                            // bonus backside
+                            .bonus.bonus--backside.back
+                                span.info-icon
+                                section.bonus__main
+                                    section.bonus__main-content
+                                        h2.bonus__title Бездепозитный бонус
+                                        p.bonus__desctiption
+                                            | 1000
+                                            sup.sup-uah UAH
+                                        .clearfix
+                                        .dash-line
+                                        section.bonus-backside__content
+                                            p.bonus-backside__heading Условия получения бонуса
+                                            ul.bonus-backside__list
+                                                li Min депозит: 25 UAH / 75 RUB / 1 USD
+                                                li Max депозит: 3500 UAH / 10000 RUB /40 USD
+                                                li Вейджер: 12
+                                                li Периодичность: 1 раз в неделю в понедельник
+                                                li.backside-list-note &nbsp; Установочное приложение доступно только для платформ Anroid и Windows
+
+                                    footer.bonus__footer
+                                        a.btn.btn--green(href="#") Активировать
+
+                            // bonus backside and
+
+
+            include layouts/footer.pug

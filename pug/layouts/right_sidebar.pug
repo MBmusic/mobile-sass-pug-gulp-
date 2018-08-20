@@ -1,0 +1,48 @@
+section#rightSidebar(class="uk-offcanvas")
+    .sidebar(class="uk-offcanvas-bar uk-offcanvas-bar-flip")
+        header.right-sidebar__header
+            a(href="#")
+                img(src="img/layouts/header_logo.png")
+            a.right-collapse
+                i
+
+        section.sidebar__user-id
+            .user__icon
+            .user__id ID #5e912d
+            a.load__icon.load__icon--logout(href="/logout")
+
+        section.sidebar__user-data
+            .data__head
+                p Баланс:
+                p Бонус:
+                p СР:
+            .data__value
+                p 10 000.00 UAH
+                p 500.00 UAH
+                p 150.00 СР
+            .load__icon
+        section.sidebar__deposit
+            a.btn-deposit(href="#")
+                span Депозит
+        ul.right-sidebar__nav
+            li
+                a.nav--report(href="#")
+                    span.icon
+                    | Сводка
+            li
+                a.nav--user-data(href="#")
+                    span.icon
+                    | Мои данные
+            li
+                a.nav--download(href="#")
+                    span.icon
+                    | Загрузка документов
+            li
+                a.nav--cash(href="#")
+                    span.icon
+                    | Касса
+            li
+                a.nav--bonuses(href="#")
+                    span.icon
+                        span.bonuses-qty 5
+                    | Доступные бонусы

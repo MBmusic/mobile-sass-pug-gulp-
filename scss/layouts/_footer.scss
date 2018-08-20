@@ -1,0 +1,124 @@
+// common
+.footer-actions-common {
+    @include flex-container(row, flex-start, center);
+    float: left;
+    width: 50%;
+    height: 64px;   
+}
+
+// actions (help, main site)
+.footer__actions {
+    //background-image: linear-gradient(to right, $app-yellow, $app-yellow  50%, $app-blue-dark 50%);
+    background: $app-yellow;
+
+    .actions__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    a {
+        display: block;
+        text-decoration: none;
+        width: 100%; 
+        padding: 15px 15px 15px 65px;  
+        text-align: left;         
+        background-repeat: no-repeat; 
+        background-position: 15px center;   
+    }
+
+    .footer__help {        
+        @extend .footer-actions-common;                    
+
+        a {
+            background-image: url("../img/layouts/footer_help.png"); 
+            background-size: 44px 38px;            
+            color: $app-blue-text-dark-2;            
+            font-weight: 700;
+        }        
+    } 
+    .footer__site {
+        @extend .footer-actions-common;         
+
+        a {
+            background-image: url("../img/layouts/footer_desktop.png"); 
+            background-size: 38px 38px;              
+            color: $app-blue-text-light;            
+            font-weight: 400;
+        }
+    }  
+}
+
+// navigation
+.footer__navigation {
+    background-color: $app-blue-light;    
+
+    .navigation__wrapper {
+        section {
+            width: 50%;
+            float: left;
+            padding: 20px 15px;
+        }
+
+        img {
+            max-width: inherit;
+        }
+
+        li {
+            margin-bottom: 5px;
+
+            a {
+                color: $app-blue-text-light;            
+                font-weight: 400;
+                text-decoration: none;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        
+    }
+
+}
+
+// pay 
+.footer__pay {
+    background-color: $app-blue-dark;
+    color: white;   
+    text-align: center; 
+
+    .pay__wrapper {
+        padding: 20px 15px;  
+
+        .pay__list {
+            @include flex-container(row, center, center);            
+            flex-wrap: wrap; 
+            margin-top: 5px;
+
+            li {
+                padding: 5px 20px;
+
+                &:first-child {
+                    padding-left: 0;
+                }
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+        }
+        
+    }
+}
+
+// copyright
+.footer__copyright {    
+    background-color: $app-blue-light;    
+
+    .copyright__wrapper { 
+        height: 34px;
+        padding: 0 14px;
+        color: $app-blue-text-dark;       
+        @include flex-container(row, center, center);        
+    }
+}

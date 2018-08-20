@@ -1,0 +1,139 @@
+doctype html
+html(lang="ru-RU")
+    head
+        include head/head.pug
+    body
+        include layouts/left_sidebar.pug
+        include layouts/right_sidebar.pug
+        include layouts/page_preloader.pug
+
+        <div class="modal modal-bonus-start">
+        // Bonus popup (start)
+        div.modal.modal-bonus-start
+            div.modal-dialog
+                div.close
+
+                div.modal-content
+                    div.title
+                        | Ваш подарок
+
+                    div.bonus-block-lit.bonus-block-lit-blue.bb1
+                        span 
+                            | 100
+                        div
+                        span
+                            | FS
+
+                    div.bonus-block-lit.bonus-block-lit-red.bb2
+                        span
+                            | 100
+                            i
+                                | %
+                        div
+                        span
+                            | бонус
+
+                    div.bonus-block-big
+                        span
+                            | 100
+                            i
+                                | %
+                        div
+                        span
+                            | бонус
+                        
+
+                    div.bonus-popup-vulkan
+
+                    div.bonus-block-info
+                        div.title
+                            | Бонус “Среда” истекает через:
+
+                        div.bonus-timer
+                            div.countdown
+                                span.number-wrapper
+                                    div.line
+                                    div.caption
+                                        | ДНЕЙ
+                                    span.number.day
+                                        | 02
+                                span.number-wrapper
+                                    div.line
+                                    div.caption
+                                        | ЧАСОВ
+                                    span.number.hour
+                                        | 09
+                                span.number-wrapper
+                                    div.line
+                                    div.caption
+                                        | МИНУТ
+                                    span.number.min
+                                        | 00
+                                span.number-wrapper
+                                    div.line
+                                    div.caption
+                                        | СЕКУНД
+                                    span.number.sec
+                                        | 22
+
+
+                        a(href="#", class="btn btn--red")
+                            | Активировать бонус
+
+                        div.up-the-gift
+                            a(href="#")
+                                | отказаться от подарка
+
+                        div.line
+
+                        div.bonus-bot-text
+                            p
+                                | Внеси депозит от 250 грн с промокодом «Среда»
+                                br
+                                | и получи 50% бонуса и по 50 фриспинов на игру
+                                br
+                                | Book of Ra. Фриспины начисляются без вейджера.
+
+
+        // Bonus popup (end)
+        
+        div#wrapper
+            .header.header--line
+                include layouts/header.pug
+
+            div.contentpage.contentpage--graybg
+                div.contentpage__content.contentpage--else
+                    div.title Контакты
+
+                    div.contacts
+                        div.contacts__block
+                            img(src="img/contacts/img1.png", alt="")
+                            p 
+                                | Воспользуйтесь
+                                | &nbsp;
+                                a.text-underline(href="#") онлайн чатом
+                                | &nbsp
+                                | vulkanoriginals, и вы сможете получить помощь в режиме реального времени 24 часа в сутки, 7 дней в неделю.
+                                
+                            div.games__all
+                                a(href="#", class="btn btn--green") Онлайн чат
+
+                        div.contacts__block
+                            img(src="img/contacts/img2.png", alt="")
+                            p
+                                | Главный офис: 
+                                b The beach House, Bapor Kibra z/n Willemstad, Curacao.
+
+                        div.contacts__block
+                            img(src="img/contacts/img3.png", alt="")
+                            p
+                                | Пожалуйста, укажите в письме номер аккаунта и наиболее подробно опишите интересующий вас вопрос. Письма рассмотрят в будни в рабочее время. 
+                                br
+                                a(href="#") support@vulkanoriginal.com
+
+                            div.games__all
+                                a(href="#", class="btn btn--green") Написать
+
+                        div.clear
+                    
+            include layouts/footer.pug

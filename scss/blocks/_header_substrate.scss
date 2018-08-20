@@ -1,0 +1,32 @@
+.header--line {
+  padding-top: 70px;
+
+  &.header--home {
+    padding-top: 0;
+  }
+}
+
+.header-substrate {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  background-color: #003778;
+
+  .linefence {
+    top: calc(100% - 5px);
+  }
+
+  img {
+    position: relative;
+    top: 25px;
+
+    &.substrate-img--profile {
+      top: 40px;
+    }
+
+  }
+}
+.header-substrate--linefence {
+  height: 130px;
+}

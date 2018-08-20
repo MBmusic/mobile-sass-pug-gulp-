@@ -1,0 +1,23 @@
+/* include files */
+
+/* main includes */
+@import 'vars';
+@import 'extends';
+@import 'reset';
+@import 'mixins';
+@import 'common';
+
+/* blocks (folder) */
+@import 'blocks/includes';
+
+/* pages (folder) */
+@import 'pages/includes';
+
+/* layouts (folder) */
+@import 'layouts/includes';
+
+/* layouts (folder) */
+@import 'other/includes';
+
+/* responsive */
+@import 'responsive';

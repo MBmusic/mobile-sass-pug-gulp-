@@ -1,0 +1,47 @@
+doctype html
+html(lang="ru-RU")
+    head
+        include head/head.pug
+    body
+        include layouts/left_sidebar.pug
+        include layouts/right_sidebar.pug
+        include layouts/page_preloader.pug
+
+        #wrapper
+            .header
+                include layouts/header.pug
+            section.header-substrate.header-substrate--linefence
+                img(src="img/banner_cash.png")
+                .linefence
+            .contentpage.contentpage--graybg
+                .contentpage__content.contentpage--else
+                    .title Касса
+
+                    .cash
+                        ul
+                            li
+                                a.cash-deposit(href="#modalDialog" data-uk-modal="{center:true}")
+                                    .icon
+                                    | депозит
+                            li
+                                a.cash-payout(href="#modalDialog" data-uk-modal="{center:true}")
+                                    .icon
+                                    | заказ выплаты
+                            li
+                                a.cash-cp(href="#modalDialog" data-uk-modal="{center:true}")
+                                    .icon
+                                    | обмен СР
+                            li
+                                a.cash-deposit-history(href="#modalDialog" data-uk-modal="{center:true}")
+                                    .icon
+                                    | мои депозиты
+                            li
+                                a.cash-payout-history(href="#modalDialog" data-uk-modal="{center:true}")
+                                    .icon
+                                    | мои выплаты
+                            li
+                                a.cash-payments(href="#modalDialog" data-uk-modal="{center:true}")
+                                    .icon
+                                    | методы оплаты
+            include layouts/footer.pug
+            include layouts/modal.pug

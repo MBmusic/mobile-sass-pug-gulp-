@@ -1,0 +1,106 @@
+/* payments */
+
+.methodspay .methodspay__blocks {
+    margin-bottom: 4px;
+    
+    .methodspay__blockimg {
+        @include width-height(calc(50% - 2px), 100px);
+        background: $white;
+        border-radius: 8px;
+        float: left;
+        margin-right: 4px;
+        position: relative;
+        text-align: center;
+        cursor: pointer;
+        vertical-align: middle;
+        position: relative;
+
+        img {
+            position: absolute;
+            margin: auto;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+        }
+
+        &:nth-child(2n) {
+            margin-right: 0px;
+        }
+
+        &:after {
+            content: "";
+            @include width-height(39px, 39px);
+            background: url(../img/pay-info.png) no-repeat;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+
+        &.active {
+            background: $white;
+            border-radius: 8px 8px 0px 0px;
+            border-bottom: solid 4px #ffd801;
+            height: 104px;
+        }
+
+        &.active:after {
+            content: "";
+            background: none;
+        }
+    }
+
+    .methodspay__text {
+        width: 100%;
+        display: block;
+        background: $white;
+        padding: 15px;
+        color: #7a7787;
+        display: none;
+        line-height: 28px;
+        position: relative;
+        margin-bottom: 10px;
+    
+        p span {
+            color: #266ccc;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+    
+        p {
+            margin: 10px 0 0;
+            padding: 0 5px;
+        }
+
+        .methodspay__float-block {
+            float: left;
+            width: 50%;
+            text-align: center;
+
+            @media(max-width: 700px) {
+                width: 100%;
+                padding-bottom: 15px;
+
+                &:nth-child(1) {
+                    border-bottom: 2px solid #ffd801;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        .methodspay__title {
+            font-family: $font-family;
+            font-size: 16px;
+            font-weight: 700;
+            color: #015ecb;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+
+        &:after {
+            @extend .linefance;
+        }
+    }
+}
+
+

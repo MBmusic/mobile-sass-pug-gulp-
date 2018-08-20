@@ -1,0 +1,119 @@
+.title--profile {
+  margin-bottom: 0;
+}
+
+.profile-id {
+  color: #d10303;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.profile__section {
+  background: $white;
+  box-shadow: 0 2px 0 #a8b9d6;
+  padding: 10px 8px 15px;
+  margin-top: 15px;
+
+  .section-heading {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: $font-family;
+    color: #015ecb;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  &.profile__section--red {
+    border: 2px solid #f97676;
+    box-shadow: 0 2px 0 #a8b9d6;
+  }
+
+  &.profile__section--green {
+    border: 2px solid #8acc4a;
+    box-shadow: 0 2px 0 #a8b9d6;
+
+    .section-heading {
+      color: #5e912d;
+    }
+  }
+
+  .uk-grid>* {
+    padding-left: 10px;
+  }
+  .uk-grid {
+    margin-left: -10px !important;
+  }
+
+  .link {
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: underline;
+    margin-bottom: 5px;
+    display: block;
+  }
+
+}
+
+.btn--profile {
+  margin: 15px auto  0;
+  width: 234px;
+
+  .btn {
+    font-size: 18px;
+    height: 46px;
+    line-height: 39px;
+  }
+}
+
+.profile-email {
+  position: relative;
+
+  .email-edit-btn {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    background: url(../img/btn_input_edit.png) no-repeat center;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    cursor: pointer;
+  }
+}
+
+.accept-email {
+
+  input {
+    text-align: center;
+  }
+}
+
+input.email-confirm-input {
+  width: 173px;
+  background-image: url(../img/profile_email_code_input_bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  letter-spacing: 37px;
+  padding: 0 13px 0 17px;
+  margin: 0 auto;
+
+  &:focus {
+    border: none;
+    background-image: url(../img/profile_email_code_input_bg_active.png);
+  }
+}
+
+input.email-confirm-input::-webkit-input-placeholder {
+  letter-spacing: 39px;
+}
+input.email-confirm-input::-moz-placeholder {
+  letter-spacing: 39px;
+}
+input.email-confirm-input:-ms-input-placeholder {
+  letter-spacing: 39px;
+}
+input.email-confirm-input:-moz-placeholder {
+  letter-spacing: 39px;
+}

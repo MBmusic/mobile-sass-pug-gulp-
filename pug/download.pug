@@ -1,0 +1,88 @@
+doctype html
+html(lang="ru-RU")
+    head
+        include head/head.pug
+    body
+        include layouts/left_sidebar.pug
+        include layouts/right_sidebar.pug
+        include layouts/page_preloader.pug
+
+        div#wrapper
+            .header.header--line
+                include layouts/header.pug
+
+            div.contentpage.contentpage--graybg.graybg--light
+                div.contentpage__content.contentpage--else
+                    div.profile__section.download
+                        h2.section-heading Требования к документам
+
+                        div.statictext
+                            ul
+                                li
+                                    | Максимальный размер файла не должен превышать 7Мб.
+                                li
+                                    | Поддерживаемые типы файлов: gif, png, jpg.
+                                li
+                                    | Максимальное количество файлов – 6. 
+
+                            p.bluetext 
+                                | Подтверждающим личность документом в онлайн казино Вулкан является только внутренний паспорт в котором должно быть четко видно:
+
+                            ul
+                                li
+                                    | Ваше имя и фамилию;
+                                li
+                                    | Серия и номер паспорта;
+                                li
+                                    | Дата рождения; 
+                                li
+                                    | Адрес проживания/прописки.
+                            
+                            div.title-content Сроки верификации документов:
+
+                            ul.last__nomargin
+                                li
+                                    | Обычно верификация занимает 5-7 календарных дней.
+
+                    div.document
+                        div.title Загрузите документ
+
+                        form(method="post")
+                            .label
+                                label Название документа
+                                input(type="text")
+                            
+                            .label.label--docselect 
+                                a(href="#") Выбрать файл
+                            
+                            div.games__all  
+                                a(href="#", class="btn btn--red") Сохранить  
+
+                    div.profile__section.download.table
+                        .statictext
+                            table
+                                tr
+                                    th Название файла
+                                    th Верификация
+                                    th 
+                                tr.table--uploadline
+                                    td Gambler.doc 
+                                    td Загружено
+                                    td
+                                        span.table--upload.is--ok
+                                tr
+                                    td Gambler.doc 
+                                    td Загружено
+                                    td
+                                        span.table--upload.is--no
+                                tr
+                                    td Gambler.doc 
+                                    td Загружено
+                                    td
+                                        span.table--upload.is--no
+                                tr
+                                    td Gambler.doc 
+                                    td Отклонено
+                                    td
+
+            include layouts/footer.pug

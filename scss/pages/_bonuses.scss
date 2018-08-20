@@ -1,0 +1,9 @@
+.bonuses {
+  @include flex-container(row, center, center);
+  flex-wrap: wrap;
+  margin-left: -10px;
+
+  @media(max-width: 991px) {
+    justify-content: center;
+  }
+}

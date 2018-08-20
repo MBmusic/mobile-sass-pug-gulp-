@@ -1,0 +1,148 @@
+.flip-card--tournament {
+  width: 307px;
+  height: 465px;
+  margin-bottom: 16px;
+  margin-left: 10px;
+}
+
+.tournament-info {
+  position: relative;
+}
+
+.tournament__counter {
+  @include flex-container(row, flex-start, center);
+  height: 50px;
+  padding: 5px 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.tournament__date {
+  color: #8b8b99;
+  font-size: 12px;
+  text-align: center;
+  line-height: 14px;
+  font-weight: 400;
+}
+
+.tournament__date--to-end {
+  text-transform: uppercase;
+  font-weight: 700;
+  padding-top: 5px;
+
+  span {
+    display: block;
+    line-height: 17px;
+  }
+}
+
+.tournament__title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26.01px;
+  color: #023a7e;
+  padding: 10px 5px 5px;
+  margin-bottom: 0;
+}
+
+.tournament {
+  width: 304px;
+  height: 460px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 0 #a8b9d6;
+  background-color: $white;
+  padding: 0 7px 15px;
+  counter-reset: section;
+
+  table {
+    width: 100%;
+
+    th, td {
+      vertical-align: middle;
+      padding: 9px 8px;
+      font-size: 12px;
+
+      &:nth-child(1),
+      &:nth-child(3) {
+        text-align: center;
+      }
+
+      &:nth-child(2) {
+        text-align: left;
+      }
+    }
+
+    th {
+      color: #fefeff;
+      background-color: #0a95cb;
+    }
+
+    td {
+      color: #4e4d5e;
+      background-color: #c9eefc;
+      border-bottom: 2px solid $white;
+    }
+
+    .active td {
+      background-color: #faf6c0;
+    }
+  }
+
+}
+
+// backside
+.tournament--backside {
+  padding: 0 0 15px;
+
+  .uk-slideshow {
+
+    li {
+      width: 100%;
+
+      .gameblock__game {
+        width: 50%;
+        float: left;
+      }
+    }
+  }
+
+  .gameblock__game .gameblock__games-link span {
+    margin-top: 5px;
+  }
+}
+
+.tournament-backside__header {
+  padding: 19px 40px 12px 12px;
+}
+
+.tournament-backside__text {
+  font-size: 14px;
+  margin-bottom: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 245px;
+
+  &:hover {
+    text-overflow: clip;
+  }
+}
+
+.tournament-backside__info-key {
+  color: #7a7787;
+  font-weight: 400;
+}
+
+.tournament-backside__info-value {
+  color: #266ccc;
+  font-weight: 700;
+}
+
+.uk-overlay.active .uk-overlay-slide-top {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}

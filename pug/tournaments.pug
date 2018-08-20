@@ -1,0 +1,256 @@
+doctype html
+html(lang="ru-RU")
+    head
+        include head/head.pug
+    body
+        include layouts/left_sidebar.pug
+        include layouts/right_sidebar.pug
+        include layouts/page_preloader.pug
+
+        #wrapper
+            .header
+                include layouts/header.pug
+            section.header-substrate.header-substrate--linefence
+                img(src="img/banner_tournaments.png")
+                .linefence
+            .contentpage.contentpage--graybg.graybg--light
+                .contentpage__content.contentpage--else
+                    h1.title Турниры
+
+                    .tournaments
+                        // two side card
+                        .flip-card.flip-card--tournament
+                            // tournament
+                            .tournament.front
+                                .tournament-info
+                                    img.tournament__image(src="img/tournaments/week_hero.png")
+                                    .tournament__counter
+                                        span.tournament__date.tournament__date--to-end
+                                            span до конца
+                                            span турнира:
+                                        .countdown.ct1
+                                span.info-icon
+                                section.tournament__main
+                                    header.tournament__header
+                                        p.tournament__title Турнир "Герой недели"
+                                    section.tournament__content
+                                        table
+                                            thead
+                                                tr
+                                                    th №
+                                                    th Имя
+                                                    th Очки
+                                            tbody
+                                                tr
+                                                    td 1
+                                                    td Gambler
+                                                    td 45862479
+                                                tr
+                                                    td 2
+                                                    td diablo87
+                                                    td 37256456
+                                                tr
+                                                    td 3
+                                                    td funker
+                                                    td 32568548
+                                                tr
+                                                    td 4
+                                                    td duke
+                                                    td 22536987
+                                                tr.active
+                                                    td 5
+                                                    td dracula
+                                                    td 22536987
+                            // tournament and
+                            // tournament backside
+                            .tournament.tournament--backside.back
+                                span.info-icon
+                                section.tournament-backside__main
+                                    header.tournament-backside__header
+                                        p.tournament-backside__text
+                                            span.tournament-backside__info-key Ваш статус: &nbsp;
+                                            span.tournament-backside__info-value Novice
+                                        p.tournament-backside__text
+                                            span.tournament-backside__info-key Ваш курс обмена: &nbsp;
+                                            span.tournament-backside__info-value 15 UAH за 100CP
+                                        p.tournament-backside__text
+                                            span.tournament-backside__info-key Доступно CP.: &nbsp;
+                                            span.tournament-backside__info-value 5.63
+
+                                    section.tournament-backside__content
+                                        .uk-slidenav-position(data-uk-slideshow="{animation: 'scroll'}")
+                                            ul.uk-slideshow
+                                                - for (var j = 0; j < 3; j++)
+                                                    li
+                                                        - for (var i = 0; i < 4; i++)
+                                                            figure.gameblock__game.uk-overlay.uk-ignore
+                                                                img(src="img/game.jpg", alt="", class="uk-overlay-spin")
+                                                                figcaption.uk-overlay-panel.uk-overlay-slide-top
+                                                                    a(href="#", class="gameblock__games-link")
+                                                                        b.gameblock__games-roundbtn.play
+                                                                            i
+                                                                        span Регистрация
+
+                                                                    div.gameblock__games-title
+                                                                        a(href="#") демо
+
+                                            a.uk-slidenav.uk-slidenav-contrast.uk-slidenav-previous.flip-arrow(data-uk-slideshow-item='previous')
+                                            a.uk-slidenav.uk-slidenav-contrast.uk-slidenav-next.flip-arrow(data-uk-slideshow-item='next')
+
+                            // tournament backside and
+                        // two side card and
+
+                        // two side card
+                        .flip-card.flip-card--tournament
+                            // tournament
+                            .tournament.front
+                                .tournament-info
+                                    img.tournament__image(src="img/tournaments/well_wait.png")
+                                    .tournament__counter
+                                        span.tournament__date.tournament__date--to-end
+                                            span до конца
+                                            span турнира:
+                                        .countdown.ct2
+                                span.info-icon
+                                section.tournament__main
+                                    header.tournament__header
+                                        p.tournament__title Турнир "Ну, погоди!"
+                                    section.tournament__content
+                                        table.tournament__table
+                                            thead
+                                                tr
+                                                    th №
+                                                    th Имя
+                                                    th Очки
+                                            tbody
+                                                tr
+                                                    td 1
+                                                    td Gambler
+                                                    td 45862479
+                                                tr
+                                                    td 2
+                                                    td diablo87
+                                                    td 37256456
+                                                tr
+                                                    td 3
+                                                    td funker
+                                                    td 32568548
+                                                tr
+                                                    td 4
+                                                    td duke
+                                                    td 22536987
+                                                tr.active
+                                                    td 5
+                                                    td dracula
+                                                    td 22536987
+                            // tournament and
+                            // tournament backside
+                            .tournament.tournament--backside.back
+                                span.info-icon
+                                section.tournament-backside__main
+                                    header.tournament-backside__header
+                                        p.tournament-backside__text
+                                            span.tournament-backside__info-key Ваш статус: &nbsp;
+                                            span.tournament-backside__info-value Novice
+                                        p.tournament-backside__text
+                                            span.tournament-backside__info-key Ваш курс обмена: &nbsp;
+                                            span.tournament-backside__info-value 15 UAH за 100CP
+                                        p.tournament-backside__text
+                                            span.tournament-backside__info-key Доступно CP.: &nbsp;
+                                            span.tournament-backside__info-value 5.63
+
+                                    section.tournament-backside__content
+                                        .uk-slidenav-position(data-uk-slideshow="{animation: 'scroll'}")
+                                            ul.uk-slideshow
+                                                - for (var j = 0; j < 3; j++)
+                                                    li
+                                                        - for (var i = 0; i < 4; i++)
+                                                            figure.gameblock__game.uk-overlay.uk-ignore
+                                                                img(src="img/game.jpg", alt="", class="uk-overlay-spin")
+                                                                figcaption.uk-overlay-panel.uk-overlay-slide-top
+                                                                    a(href="#", class="gameblock__games-link")
+                                                                        b.gameblock__games-roundbtn
+                                                                            i
+
+                                            a.uk-slidenav.uk-slidenav-contrast.uk-slidenav-previous.flip-arrow(data-uk-slideshow-item='previous')
+                                            a.uk-slidenav.uk-slidenav-contrast.uk-slidenav-next.flip-arrow(data-uk-slideshow-item='next')
+                            // tournament backside and
+                        // two side card and
+
+                        // two side card
+                        .flip-card.flip-card--tournament
+                            // tournament
+                            .tournament.front
+                                .tournament-info
+                                    img.tournament__image(src="img/tournaments/week_hero.png")
+                                    .tournament__counter
+                                        span.tournament__date.tournament__date--to-end
+                                            span до конца
+                                            span турнира:
+                                        .countdown.ct3
+                                span.info-icon
+                                section.tournament__main
+                                    header.tournament__header
+                                        p.tournament__title Турнир "Герой недели"
+                                    section.tournament__content
+                                        table.tournament__table
+                                            thead
+                                                tr
+                                                    th №
+                                                    th Имя
+                                                    th Очки
+                                            tbody
+                                                tr
+                                                    td 1
+                                                    td Gambler
+                                                    td 45862479
+                                                tr
+                                                    td 2
+                                                    td diablo87
+                                                    td 37256456
+                                                tr
+                                                    td 3
+                                                    td funker
+                                                    td 32568548
+                                                tr
+                                                    td 4
+                                                    td duke
+                                                    td 22536987
+                                                tr.active
+                                                    td 5
+                                                    td dracula
+                                                    td 22536987
+                            // tournament and
+                            // tournament backside
+                            .tournament.tournament--backside.back
+                                span.info-icon
+                                section.tournament-backside__main
+                                    header.tournament-backside__header
+                                        p.tournament-backside__text
+                                            span.tournament-backside__info-key Ваш статус: &nbsp;
+                                            span.tournament-backside__info-value Novice
+                                        p.tournament-backside__text
+                                            span.tournament-backside__info-key Ваш курс обмена: &nbsp;
+                                            span.tournament-backside__info-value 15 UAH за 100CP
+                                        p.tournament-backside__text
+                                            span.tournament-backside__info-key Доступно CP.: &nbsp;
+                                            span.tournament-backside__info-value 5.63
+
+                                    section.tournament-backside__content
+                                        .uk-slidenav-position(data-uk-slideshow="{animation: 'scroll'}")
+                                            ul.uk-slideshow
+                                                - for (var j = 0; j < 3; j++)
+                                                    li
+                                                        - for (var i = 0; i < 4; i++)
+                                                            figure.gameblock__game.uk-overlay.uk-ignore
+                                                                img(src="img/game.jpg", alt="", class="uk-overlay-spin")
+                                                                figcaption.uk-overlay-panel.uk-overlay-slide-top
+                                                                    a(href="#", class="gameblock__games-link")
+                                                                        b.gameblock__games-roundbtn
+                                                                            i
+
+                                            a.uk-slidenav.uk-slidenav-contrast.uk-slidenav-previous.flip-arrow(data-uk-slideshow-item='previous')
+                                            a.uk-slidenav.uk-slidenav-contrast.uk-slidenav-next.flip-arrow(data-uk-slideshow-item='next')
+                            // tournament backside and
+                        // two side card and
+            include layouts/footer.pug

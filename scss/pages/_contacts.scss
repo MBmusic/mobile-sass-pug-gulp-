@@ -1,0 +1,27 @@
+/* contacts */
+
+.contentpage__content.contentpage--else {
+    padding: 14px 10px;
+}
+
+.contacts {
+    text-align: center;
+
+    .contacts__block {
+        width: 260px;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 8px;
+    
+        img {
+            direction: block;
+            margin: 0 auto 10px;
+        }
+    
+        p {
+            height: 120px;
+            font-size: 14px;
+            margin: 0px;
+        }
+    }
+} 

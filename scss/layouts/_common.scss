@@ -1,0 +1,85 @@
+.footer p, .sidebar p {
+  margin: 0;
+}
+
+.sidebar {
+  width: 275px;
+  text-align: center;
+  background-color: #1240af;
+  color: $white;
+}
+
+.load__icon {
+  @include round-btn-icon(40px, 40px, url("../img/load_icon.png"));
+  margin: 0;
+
+  &--logout {
+    background-image: url("../img/layouts/icon_enter.png");
+
+    &:hover, &:active {
+      background-image: url("../img/layouts/icon_enter_hover.png");
+    }
+  }
+}
+
+.open__left-sidebar {
+  @include round-btn(50px, 50px);
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  padding: 14px 12px 16px 11px;
+  z-index: 1;
+
+  i {
+    @include round-btn-icon(28px, 21px, url("../img/layouts/nav_sprite.png"));
+    background-position: 0 -217px;
+  }
+}
+.open__right-sidebar, .icon-reg  {
+  @include round-btn(50px, 50px);
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 1;
+}
+
+.open__right-sidebar {
+  padding: 14px 12px 16px 11px;
+
+  i {
+    @include round-btn-icon(28px, 25px, url("../img/layouts/nav_sprite.png"));
+    background-position: -26px -117px;
+  }
+}
+
+.icon-reg {
+  padding: 12px 12px 16px 11px;
+  i {
+    @include round-btn-icon(28px, 28px, url("../img/layouts/icon_reg.png"));
+    background-position: 2px 0;
+  }
+}
+
+
+
+.uk-offcanvas {
+  background: rgba(0,0,0,.5);
+}
+
+.label {
+  &.label--radio {
+    text-align: center;
+    color: #aeadb8;
+    vertical-align: middle;
+
+    .jq-radio {
+      display: inline-block;
+      margin: 0 2px 0 10px;
+    }
+
+    label {
+      display: inline-block;
+      padding: 0 10px 0 0;
+    }
+  }
+}

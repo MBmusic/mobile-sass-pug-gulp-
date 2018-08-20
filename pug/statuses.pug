@@ -1,0 +1,79 @@
+doctype html
+html(lang="ru-RU")
+    head
+        include head/head.pug
+    body
+        include layouts/left_sidebar.pug
+        include layouts/right_sidebar.pug
+        include layouts/page_preloader.pug
+
+        #wrapper
+            .header
+                include layouts/header.pug
+            section.header-substrate.header-substrate--linefence
+                img(src="img/banner_statuses.png")
+                .linefence
+            .contentpage.contentpage--graybg
+                .contentpage__content.contentpage--else
+                    .title VIP-статусы
+
+                    .statuses
+                        ul
+                            li.status-newbie.active
+                                .icon
+                                p.status-name новичок
+                                p.status-cp 0 СР
+                            li.status-amateur
+                                .icon
+                                p.status-name любитель
+                                p.status-cp 100 СР
+                            li.status-experienced
+                                .icon
+                                p.status-name опытный
+                                p.status-cp 500 СР
+                            li.status-lucky
+                                .icon
+                                p.status-name фартовый
+                                p.status-cp 1000 СР
+                            li.status-specialist
+                                .icon
+                                p.status-name специалист
+                                p.status-cp 5000 СР
+                            li.status-master
+                                .icon
+                                p.status-name мастер
+                                p.status-cp 10000 СР
+                            li.status-expert
+                                .icon
+                                p.status-name эксперт
+                                p.status-cp 20000 СР
+                            li.status-profi
+                                .icon
+                                p.status-name профи
+                                p.status-cp 40000 СР
+                            li.status-guru
+                                .icon
+                                p.status-name гуру
+                                p.status-cp 75000 СР
+                            li.status-champion
+                                .icon
+                                p.status-name чемпион
+                                p.status-cp 100000 СР
+                            li.status-vip-bronze
+                                .icon
+                                p.status-name vip bronze
+                                p.status-cp 150000 CP
+                            li.status-vip-silver
+                                .icon
+                                p.status-name vip silver
+                                p.status-cp 200000 CP
+                            li.status-vip-gold
+                                .icon
+                                p.status-name vip gold
+                                p.status-cp 300000 CP
+                            li.status-vip-platinum
+                                .icon
+                                p.status-name vip platinum
+                                p.status-cp 500000 CP
+
+            include layouts/footer.pug

@@ -1,0 +1,48 @@
+/* mixins */
+
+/* mixin btn colors */
+@mixin btn($bg, $border, $outline) {
+    background: $bg;
+    border: solid 2px $border;
+    outline: solid 2px $outline;
+}
+
+/* mixin width-height */
+@mixin width-height($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+/* mixin red round btn */
+@mixin round-btn($width, $height) {
+    width: $width;
+    height: $height;
+    box-shadow: 0 3px 0 #000000;
+    background-color: #d10303;
+    display: block;
+    border-radius: 50%;
+}
+
+/* mixin red round btn icon */
+@mixin round-btn-icon($width, $height, $bg-image) {
+    width: $width;
+    height: $height;
+    margin: 0 auto;
+    display: block;
+    background-image: $bg-image;
+    background-repeat: no-repeat;
+}
+
+/* flex */
+@mixin flex-container($direction, $horizontal-align, $vertical-align, $display: flex) {
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $horizontal-align;
+    align-items: $vertical-align;
+}
+
+/* shine image */
+@mixin fade-transition($element) {
+	-webkit-transition: $element 0.15s ease-in-out;
+	transition: $element 0.15s ease-in-out;
+}

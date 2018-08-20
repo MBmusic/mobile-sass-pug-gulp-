@@ -1,0 +1,62 @@
+doctype html
+html(lang="ru-RU")
+    head
+        include head/head.pug
+    body
+        include layouts/left_sidebar.pug
+        include layouts/right_sidebar.pug
+        include layouts/page_preloader.pug
+
+        #wrapper
+            .header
+                include layouts/header.pug
+            section.header-substrate.header-substrate--linefence
+                img.substrate-img--profile(src="img/banner_profile.png")
+                .linefence
+            .contentpage.contentpage--graybg
+                .contentpage__content.contentpage--else
+                    h1.title.title--profile Профиль
+                    .profile-id ID #334560
+
+                    div.bezdep
+                        img(src="img/money.png", alt="", class="bezdep--icon")
+                        div.bezdep__block
+                            div.bezdep__title
+                                | Получи 
+                                span 3000руб
+                                br
+                                | за регистрацию
+
+                            div.bezdep__steps
+                                div.bezdep__step.bezdep--step1.active
+                                    span.bezdep__img
+                                    div
+                                        span.bezdep__stepname - ЗАПОЛНИ -
+                                        span.bezdep__steptext профиль
+                                    
+                                div.bezdep__step.bezdep--step2.active
+                                    span.bezdep__img
+                                    div
+                                        span.bezdep__stepname - ПОДТВЕРДИ -
+                                        span.bezdep__steptext почту и телефон
+
+                                div.bezdep__step.bezdep--step3.active
+                                    span.bezdep__img
+                                    div
+                                        span.bezdep__stepname - УСТАНОВИ -
+                                        span.bezdep__steptext клиент
+
+                                img(src="img/footprints.png", alt="", class="footprints")
+                            
+                            div.games__all
+                                a(href="#", class="btn btn--red") Установить
+
+                            div.bezdep__text 
+                                | Активация бездепозитного бонуса 
+                                br
+                                | возможна только в игровом клиенте.
+
+
+
+            include layouts/footer.pug
+            include layouts/modal.pug

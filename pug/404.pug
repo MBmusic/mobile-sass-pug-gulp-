@@ -1,0 +1,30 @@
+doctype html
+html(lang="ru-RU")
+    head
+        include head/head.pug
+    body
+        include layouts/left_sidebar.pug
+        include layouts/right_sidebar.pug
+        
+        div#wrapper
+            .header
+                include layouts/header.pug
+            section.header-substrate.header-substrate--linefence
+                img(src="img/404.png")
+                .linefence
+            div.contentpage.contentpage--graybg
+                div.contentpage__content.contentpage--else
+                    div.title Ошибка
+                    
+                    div.errorpage
+                        div.errorpage__redtitle Извините, страница не найдена
+
+                        p Возможно, эта страница была удалена или допущена ошибка в адресе. Вы можете воспользоваться главным меню либо 
+                        a(href="#") перейти на главную.
+
+                        div.errorpage__banner
+                            img(src="./img/404_banner.png", alt="")
+
+
+
+            include layouts/footer.pug

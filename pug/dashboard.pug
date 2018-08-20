@@ -1,0 +1,228 @@
+doctype html
+html(lang="ru-RU")
+    head
+        include head/head.pug
+    body
+        include layouts/left_sidebar.pug
+        include layouts/right_sidebar.pug
+        include layouts/page_preloader.pug
+
+        div#wrapper
+            .header.header--line
+                include layouts/header.pug
+
+            div.contentpage.contentpage--graybg.graybg--light
+                div.contentpage__content.contentpage--dashboard
+                    div.title Сводка
+                    
+                    div.balance
+                        span.balance__title Баланс (uah)
+                        div.balance__counter
+                            span 4231.34
+
+                        div.balance__line
+                            div.balance__linetext LOW
+                            div.balance__linemain 
+                                span
+                                    i
+                            div.balance__linetext HIGH
+
+                            div.clear
+
+                        div.balance__full
+                            a(href="#", class="btn btn--green") Пополнить счет
+
+                    div.balancestats
+                        div.balancestats__blocks
+                            div.balancestats__block
+                                div.balancestats__title Бонус (uah):
+                                div.balancestats__stat 154.77
+
+                                div.balance__full
+                                    a(href="#", class="btn btn--blue btn--info no-active-btn") Инфо
+                            div.balancestats__block
+                                div.balancestats__title комп.очки (CP):
+                                div.balancestats__stat 100.00
+
+                                div.balance__full
+                                    a(href="#", class="btn btn--blue") Поменять
+                            div.clear
+
+                        div.balancestats__toggle
+                            div.balancestats__line
+                                span Отыгрыш бонуса: 
+                                    i 200/500
+                            div.balancestats__line
+                                span Кол-во открученых фриспинов: 
+                                    i 25/50 
+
+                            div.balance__full
+                                a(href="#", class="btn btn--red") Отказаться  
+
+                        br.br
+
+                    div.balancestats.balancestats--cash
+                        div.balancestats__cashin
+                            div.balancestats__cash
+                                div.balancestats__title возврат (uah):
+                                div.balancestats__stat 180.00
+
+                            div.balance__full.balance--btncash
+                                a(href="#", class="btn btn--blue") Получить 
+
+                            div.clear
+
+                    .dashboard__bonus-tournament
+
+                        // two side card tournament
+                        .flip-card.flip-card--tournament
+                           // tournament
+                           .tournament.front
+                               .tournament-info
+                                   img.tournament__image(src="img/tournaments/week_hero.png")
+                                   .tournament__counter
+                                       span.tournament__date.tournament__date--to-end
+                                           span до конца
+                                           span турнира:
+                                       .countdown.ct3
+                               span.info-icon
+                               section.tournament__main
+                                   header.tournament__header
+                                       p.tournament__title Турнир "Герой недели"
+                                   section.tournament__content
+                                       table.tournament__table
+                                           thead
+                                               tr
+                                                   th.uk-text-right №
+                                                   th.uk-text-left Имя
+                                                   th.uk-text-center Очки
+                                           tbody
+                                               tr
+                                                   td.uk-text-right 1
+                                                   td.uk-text-left Gambler
+                                                   td.uk-text-center 45862479
+                                               tr
+                                                   td.uk-text-right 2
+                                                   td.uk-text-left diablo87
+                                                   td.uk-text-center 37256456
+                                               tr
+                                                   td.uk-text-right 3
+                                                   td.uk-text-left funker
+                                                   td.uk-text-center 32568548
+                                               tr
+                                                   td.uk-text-right 4
+                                                   td.uk-text-left duke
+                                                   td.uk-text-center 22536987
+                                               tr.active
+                                                   td.uk-text-right 5
+                                                   td.uk-text-left dracula
+                                                   td.uk-text-center 22536987
+                           // tournament and
+                           // tournament backside
+                           .tournament.tournament--backside.back
+                               span.info-icon
+                               section.tournament-backside__main
+                                   header.tournament-backside__header
+                                       p.tournament-backside__text
+                                           span.tournament-backside__info-key Ваш статус: &nbsp;
+                                           span.tournament-backside__info-value Novice
+                                       p.tournament-backside__text
+                                           span.tournament-backside__info-key Ваш курс обмена: &nbsp;
+                                           span.tournament-backside__info-value 15 UAH за 100CP
+                                       p.tournament-backside__text
+                                           span.tournament-backside__info-key Доступно CP.: &nbsp;
+                                           span.tournament-backside__info-value 5.63
+
+                                   section.tournament-backside__content
+                                       .uk-slidenav-position(data-uk-slideshow="{animation: 'scroll'}")
+                                           ul.uk-slideshow
+                                               - for (var j = 0; j < 3; j++)
+                                                   li
+                                                       - for (var i = 0; i < 4; i++)
+                                                           figure.gameblock__game.uk-overlay.uk-ignore
+                                                               img(src="img/game.jpg", alt="", class="uk-overlay-spin")
+                                                               figcaption.uk-overlay-panel.uk-overlay-slide-top
+                                                                   a(href="#", class="gameblock__games-link")
+                                                                       b.gameblock__games-roundbtn
+                                                                           i
+
+                                           a.uk-slidenav.uk-slidenav-contrast.uk-slidenav-previous.flip-arrow(data-uk-slideshow-item='previous')
+                                           a.uk-slidenav.uk-slidenav-contrast.uk-slidenav-next.flip-arrow(data-uk-slideshow-item='next')
+                           // tournament backside and
+                        // two side card (tournament) and
+
+                        // two side bonus card
+                        .flip-card.flip-card--bonus
+                            // bonus
+                            .bonus.bonus--x2.front
+                                img.bonus__image(src="img/bonuses/bg_x2.png")
+                                span.info-icon
+                                section.bonus__main
+                                    header.bonus__header
+                                        h2.bonus__title Бонус x2
+                                        p.bonus__desctiption
+                                            | 100
+                                            sup %
+
+                                        .bonus__content
+                                            .bonus__plus +
+                                            .bonus__fs
+                                                span.bonus-fs__int 500
+                                                sup fs
+                                    .clearfix
+                                    .dash-line
+                                    section.bonus__steps
+                                        .vertical-separator
+                                        .bonus__step
+                                            .bonus__step-bg
+                                                .bonus__step-icon.bonus__step-icon--textX2 W
+                                                span Wager
+                                            .bonus__step-description
+                                                span.step-description--text1 Вейджер
+                                                span.step-description--text2 35
+                                        .bonus__step
+                                            .bonus__step-bg
+                                                .bonus__step-icon.bonus__step-icon--dep
+                                                    img(src="img/bonuses/x2-pick1.png")
+                                                span депозит
+                                            .bonus__step-description
+                                                span.step-description--text1 Min (uah)
+                                                span.step-description--text2 10
+                                        .bonus__step
+                                            .bonus__step-bg.bonus__step-bg-time
+                                                .bonus__step-icon.bonus__step-icon--time
+                                                    img(src="img/bonuses/x2-pick2.png")
+                                                span время
+                                            .bonus__step-description
+                                                span.step-description--text3 вт
+                                                span.step-description--text3 20:00-21:00
+                                    footer.bonus__footer
+                                        a.btn.btn--green(href="#") Активировать
+
+
+                            // bonus and
+                            // bonus backside
+                            .bonus.bonus--backside.back
+                                span.info-icon
+                                section.bonus__main
+                                    header.bonus__header
+                                        h2.bonus__title Бонус x2
+                                        p.bonus__desctiption
+                                            | 100
+                                            sup %
+                                        .clearfix
+                                        .dash-line
+                                    section.bonus-backside__content
+                                        p.bonus-backside__heading Условия получения бонуса
+                                        ul.bonus-backside__list
+                                            li Min депозит: 25 UAH / 75 RUB / 1 USD
+                                            li Max депозит: 3500 UAH / 10000 RUB /40 USD
+                                            li Вейджер: 12
+                                            li Периодичность: 1 раз в неделю в понедельник
+                                            li Max разрешенная ставка для отыгрыша бонуса: 20 UAH / 60 RUB /1 USD
+
+                                    footer.bonus__footer
+                                        a.btn.btn--green(href="#") Активировать
+                            // bonus backside and
+
+            include layouts/footer.pug
